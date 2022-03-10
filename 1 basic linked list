@@ -4,7 +4,7 @@ this folder use the basic  operation perform
 # Create a linked list
 include header file
 #include <stdio.h>
-And  #include <stdlib> both r must used header file 
+And #include <stdlib> both r must used header file 
   
 fistly write struct keyword **** (struct ...struct name...) 
 
