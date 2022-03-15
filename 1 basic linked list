@@ -9,7 +9,7 @@ And #include <stdlib> both r must used header file
 fistly write struct keyword **** (struct ...struct name...) 
 
 #include <stdio.h>
-#include <stdlib.h>
+#include < stdlib.h >
   struct node 
   {
     int data or info ;
