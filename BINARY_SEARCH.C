@@ -1,4 +1,4 @@
-****/binary search of array of the program/****
+****/binary search of array of the program And very important that always array is sort/****
 #include<stdio.h>
 
 int binarySearch(int arr[], int size, int element)
