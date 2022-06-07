@@ -1,4 +1,5 @@
 ****/insertion  at beginning node in linklist/****
+// 1-----------------------
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -76,3 +77,52 @@ Element= 7
  Element= 13
  Element= 14
  Element= 15
+ 
+ 
+ 2------------------------------
+ #include<stdio.h>
+#include<stdlib.h>
+ struct node{
+     int data;
+     struct node *next;
+ };
+ 
+//  struct node *insert(struct node *head,int data){
+struct node *insert(struct node *head){
+    int d = 2;
+     struct node *newnode=(struct node *)malloc(sizeof(struct node));
+     
+    //  newnode->data=data;
+    newnode->data=d;
+     newnode->next=head;
+     head=newnode;
+     return head;
+ }
+ 
+ int print(struct node *ptr){
+     while(ptr!=0){
+         printf("%d \n", ptr->data);
+         ptr=ptr->next;
+     }
+ }
+ 
+int main (){
+    printf("Element : \n");
+    struct node *head;
+    head= (struct node *)malloc(sizeof(struct node));
+    head->data=1;
+    head->next=0;
+    
+    print(head);
+    // printf("Element");
+    head=insert(head);
+    // head=insert(head,2);
+    printf("inserted Element\n");
+    print(head);
+}
+
+Output Of the program :
+Element : 1  //this is a first position
+inserted Element
+2  //insert at first position
+1  // this is a now second position
