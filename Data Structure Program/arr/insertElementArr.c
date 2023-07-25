@@ -77,3 +77,105 @@ int main(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==================================Second Part========================================
+
+    /******************************************************************************
+
+                Insertion all operation in array
+
+*******************************************************************************/
+#include <stdio.h>
+
+void Traverse(int arr[], int size){
+    for(int i=0; i<size; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+void insertFirst(int arr[], int size, int item){
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    for(int i = size - 1; i >= 0; i--){
+        arr[i + 1] = arr[i];
+    }
+    arr[0] = item;
+    printf("\n");
+}
+
+void insertAtIndex(int arr[], int size, int position, int item){
+    for(int i=size-1; i>=position; i--){
+        arr[i+1] = arr[i];
+    }
+    arr[position] = item;
+    printf("\n");
+    return;
+}
+
+void insertAtEnd(int arr[], int size, int element){
+    arr[size] = element;
+    printf("\n");
+}
+
+int main()
+{
+    int arr[5] = {1,2,3,4,5}, element = 23, index = 3;
+    int arraySize = sizeof(arr) / sizeof(arr[0]);
+    // printf("%d ",arraySize);
+    printf("Original array :\n");
+    Traverse(arr, arraySize);
+    
+    printf("\nInserted element in First position");
+    insertFirst(arr, arraySize, element);
+    // this arrsize is static so increase the arraySize +1
+    arraySize++;
+    Traverse(arr, arraySize);
+    
+    printf("\nInserted element At Index");
+    insertAtIndex(arr, arraySize, index, element);
+    arraySize++;
+    Traverse(arr, arraySize);
+    
+    printf("\nInserted element in End position\n");
+    insertAtEnd(arr, arraySize, element);
+    arraySize++;
+    Traverse(arr, arraySize);
+    
+    return 0;
+}
+
+
+Output is:
+// Original array :
+// 1 2 3 4 5 
+
+// Inserted element in First position
+// 23 1 2 3 4 5 
+
+// Inserted element At Index
+// 23 1 2 23 3 4 5 
+
+// Inserted element in End position
+
+// 23 1 2 23 3 4 5 23 
+// *** stack smashing detected ***: terminated   //error  hai kya ?
+
+
+
+
+
+
+
+
