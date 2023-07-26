@@ -38,6 +38,13 @@ int deletionAtLast(int arr[], int *size){
     return 0;
 }
 
+    // void deleteEnd(int arr[], int *s){
+    //     int d = arr[*s-1];
+    //     printf("%d", d);
+    //     printf("\n");
+    //     (*s)--;     // very important set the paranthesis
+    // }
+
 int main() {
     int arr[] = {1, 2, 3, 4, 5}, index = 2;
 
